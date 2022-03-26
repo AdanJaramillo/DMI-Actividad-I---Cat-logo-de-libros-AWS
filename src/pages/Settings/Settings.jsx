@@ -43,14 +43,14 @@ return (
          onChangeText={(text)=>
           setTodo((current) =>({...current, name: text}))
       }
-       style={{width:50, height:50, backgroundColor:"#e8eaed"}} 
+       style={{width:100, height:50, backgroundColor:"#e8eaed"}} 
        />
         <TextInput 
         onChangeText={(text)=>
           setTodo((current) =>({...current, description: text}))
       }
          style={{
-           width:50, 
+           width:100, 
            height:50, 
            backgroundColor:"#e8eaed",
            paddingHorizontal:10, 
