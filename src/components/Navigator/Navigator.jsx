@@ -15,7 +15,7 @@ import { GlobalContext } from '../../context/global/global.context';
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
-export default function MainNavigator(){
+export default function MainNavigator({ signOut }){
     const {state, login, logout} = useContext(GlobalContext);
 
     console.log({state});
@@ -56,7 +56,7 @@ export default function MainNavigator(){
      >
        <Tab.Screen name="Home"
        children={(props) => (
-         <HomeScreen {...props} onPress={() => logout()} />
+         <HomeScreen {...props} onPress={() => signOut()} />
        )}
        />
        <Tab.Screen name="Settings" component={SettingsScreen} />

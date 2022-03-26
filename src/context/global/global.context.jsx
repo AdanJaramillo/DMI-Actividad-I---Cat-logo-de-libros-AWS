@@ -7,7 +7,7 @@ const initialState = {
 
 export const GlobalContext = createContext(initialState);
 
-export const GlobalProvider = ({ children }) =>{
+export const GlobalProvider = ({ children}) =>{
     const [state, setState] = useState(initialState);
 
     function login (){
@@ -24,6 +24,6 @@ export const GlobalProvider = ({ children }) =>{
         <GlobalContext.Provider value={{ state, login, logout }}>
             {children}
         </GlobalContext.Provider>
-
+        
     );
 };
