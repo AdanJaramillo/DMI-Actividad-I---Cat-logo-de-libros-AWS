@@ -7,8 +7,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import LoginScreen from "../../pages/Login";
-import SettingsScreen from "../../pages/Settings";
+import AddLibroScreen from "../../pages/AddLibro";
 import HomeScreen from "../../pages/Home";
+import ListaScreen from "../../pages/Lista"
 
 import { GlobalContext } from '../../context/global/global.context';
 
@@ -42,8 +43,10 @@ export default function MainNavigator({ signOut }){
            iconName = focused
            ? "ios-home"
            : "ios-home-outline";
-         } else if(route.name === "Settings") {
-           iconName = "ios-list";
+         } else if(route.name === "AddLibro") {
+           iconName = "ios-add-circle-outline";
+          } else if(route.name === "Lista") {
+            iconName = "ios-list";
          }
 
          return <Ionicons name={iconName} size={size} color={color}></Ionicons>
@@ -59,7 +62,9 @@ export default function MainNavigator({ signOut }){
          <HomeScreen {...props} onPress={() => signOut()} />
        )}
        />
-       <Tab.Screen name="Settings" component={SettingsScreen} />
+       <Tab.Screen name="AddLibro" component={AddLibroScreen} />
+
+       <Tab.Screen name="Lista" component={ListaScreen} />
      </Tab.Navigator>
      )}
    </NavigationContainer>

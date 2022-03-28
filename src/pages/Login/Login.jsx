@@ -10,7 +10,7 @@ return (
     <View style={styles.container}>
       <StatusBar/>
       <Text>Login Screen</Text>
-      <ButtonComponent title="Login" onPress={onPress} color="#55DA12" />
+      <ButtonComponent title="Login" onPress={onPress} />
     </View>
   );
 }

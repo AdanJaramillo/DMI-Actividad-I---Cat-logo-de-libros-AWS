@@ -10,7 +10,7 @@ export default function HomeScreen({ onPress }){
     return (
       <View style={styles.container}>
         <Text>Home Screen</Text>
-        <ButtonComponent title="Logout" onPress={onPress} color="#55DA12" />
+        <ButtonComponent title="Logout" onPress={onPress} />
       </View>
     )
   }
