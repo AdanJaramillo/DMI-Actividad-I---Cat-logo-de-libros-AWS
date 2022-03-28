@@ -9,17 +9,17 @@ import ButtonComponent from "../../components/Button";
 export default function AddLibroScreen(){
   const [todos, setTodos] = useState();
 
-  const [todo, setTodo] = useState({name:"", description:""})
+  const [todo, setTodo] = useState({titulo:"", autor:"", iSBN:""})
 async function listTodos(){
   const todosFetched = await list();
   if(todosFetched) setTodos(todosFetched);
 } 
-async function createTodo(name, description){
-  const todoCreated = await create({name, description});
+async function createTodo(titulo, autor, iSBN){
+  const todoCreated = await create({titulo, autor, iSBN});
   return todoCreated;
 }
 const addData = () => {
-  createTodo(todo.name, todo.description);
+  createTodo(todo.titulo, todo.autor, todo.iSBN);
 };
 
 useEffect(() =>{
@@ -41,14 +41,14 @@ return (
         <Text>Titulo</Text>
         <TextInput
          onChangeText={(text)=>
-          setTodo((current) =>({...current, name: text}))
+          setTodo((current) =>({...current, titulo: text}))
       }
        style={{width:100, height:50, backgroundColor:"#e8eaed"}} 
        />
        <Text>Autor</Text>
         <TextInput 
         onChangeText={(text)=>
-          setTodo((current) =>({...current, description: text}))
+          setTodo((current) =>({...current, autor: text}))
       }
          style={{
            width:100, 
@@ -58,6 +58,13 @@ return (
            marginVertical:10,
           }} 
            />
+            <Text>ISBN</Text>
+        <TextInput
+         onChangeText={(text)=>
+          setTodo((current) =>({...current, iSBN: text}))
+      }
+       style={{width:100, height:50, backgroundColor:"#e8eaed"}} 
+       />
         <ButtonComponent title="Create todo" onPress={addData} />
 
       </View>
