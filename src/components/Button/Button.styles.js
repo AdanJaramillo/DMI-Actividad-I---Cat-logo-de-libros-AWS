@@ -11,8 +11,8 @@ export const styles = StyleSheet.create({
       padding: 5,
       marginTop: 10,
     },
-    blueButton: {
-        backgroundColor: "#1432E5",
+    yellowButton: {
+      backgroundColor: "#F58B1B",
 
     },
     greenButton: {

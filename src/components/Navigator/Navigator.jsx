@@ -53,7 +53,7 @@ export default function MainNavigator({ signOut }){
 
        },
 
-       tabBarActiveTintColor: "blue",
+       tabBarActiveTintColor: "#F58B1B",
        tabBarInactiveTintColor: "gray",
      })}
      >

@@ -42,7 +42,7 @@ return (
 
         {todos && 
           todos.map((todo)=> (
-          <Text key={todo.id}> {`${todo.titulo} ${todo.autor, todo.iSBN}`}</Text>
+          <Text key={todo.id}> {`${todo.titulo} ${todo.autor} ${todo.iSBN}`}</Text>
           ))}
 
       </View>
