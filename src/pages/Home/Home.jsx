@@ -1,8 +1,8 @@
 import React from "react";
-import { Text, View } from 'react-native';
+import { Text, View, Linking } from 'react-native';
 import {styles} from "./Home.styles";
 import ButtonComponent from "../../components/Button";
-import {Authenticator, withAuthenticator} from 'aws-amplify-react-native'
+
 import {Amplify} from "aws-amplify"
 
 export default function HomeScreen(){
@@ -19,8 +19,13 @@ export default function HomeScreen(){
   }
 
     return (
-
       <View style={styles.container}>
+      <Text style={{color: 'blue'}}
+        onPress={() => Linking.openURL("https://github.com/AdanJaramillo/DMI-Actividad-I---Cat-logo-de-libros-AWS")}>
+          GitHub
+        </Text>
+
+      
         <Text>Home Screen</Text>
         <ButtonComponent title="Logout" onPress={signOut} />
       </View>
