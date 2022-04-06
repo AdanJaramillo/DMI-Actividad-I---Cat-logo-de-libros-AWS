@@ -5,9 +5,12 @@ export const onCreateTodo = /* GraphQL */ `
   subscription OnCreateTodo {
     onCreateTodo {
       id
-      titulo
-      autor
+      nombre
+      descripcion
+      estatus
       iSBN
+      categoria
+      fechapublicacion
       createdAt
       updatedAt
     }
@@ -17,9 +20,12 @@ export const onUpdateTodo = /* GraphQL */ `
   subscription OnUpdateTodo {
     onUpdateTodo {
       id
-      titulo
-      autor
+      nombre
+      descripcion
+      estatus
       iSBN
+      categoria
+      fechapublicacion
       createdAt
       updatedAt
     }
@@ -29,9 +35,12 @@ export const onDeleteTodo = /* GraphQL */ `
   subscription OnDeleteTodo {
     onDeleteTodo {
       id
-      titulo
-      autor
+      nombre
+      descripcion
+      estatus
       iSBN
+      categoria
+      fechapublicacion
       createdAt
       updatedAt
     }
